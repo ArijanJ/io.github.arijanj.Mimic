@@ -11,12 +11,12 @@
         "--socket=wayland",
         "--filesystem=host-os:ro",
         "--filesystem=~/.local/share/applications:ro",
-        "--filesystem=~/.local/share/icons",
+        "--filesystem=~/.local/share/icons:ro",
         "--filesystem=~/.local/share/flatpak/exports/share/applications:ro",
-        "--filesystem=/var/lib/flatpak/app",
+        "--filesystem=/var/lib/flatpak/app:ro",
         "--filesystem=/var/lib/flatpak/exports/share/applications:ro",
-        "--filesystem=/var/lib/flatpak/exports/share/icons",
-        "--filesystem=~/.local/share/flatpak/exports/share/icons",
+        "--filesystem=/var/lib/flatpak/exports/share/icons:ro",
+        "--filesystem=~/.local/share/flatpak/exports/share/icons:ro",
         "--filesystem=/var/lib/snapd:ro",
         "--filesystem=/run/current-system/sw/share/applications:ro",
         "--filesystem=xdg-config:create"
@@ -41,7 +41,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/ArijanJ/mimic",
-                    "tag": "v1.0.1"
+                    "commit": "7c6a71b8310bc8631f49d4324342dd3d922843f0"
                 }
             ]
         }
