@@ -18,30 +18,19 @@
         "--filesystem=/var/lib/flatpak/exports/share/icons:ro",
         "--filesystem=~/.local/share/flatpak/exports/share/icons:ro",
         "--filesystem=/var/lib/snapd:ro",
+        "--filesystem=/snap:ro",
         "--filesystem=/run/current-system/sw/share/applications:ro",
         "--filesystem=xdg-config:create"
-    ],
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/man",
-        "/share/doc",
-        "/share/gtk-doc",
-        "/share/man",
-        "/share/pkgconfig",
-        "*.la",
-        "*.a"
     ],
     "modules": [
         {
             "name": "mimic",
-            "builddir": true,
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/ArijanJ/mimic",
-                    "commit": "7c6a71b8310bc8631f49d4324342dd3d922843f0"
+                    "commit": "0e36118b62084e8ba43ba14f174aeb3c24771ec9"
                 }
             ]
         }
